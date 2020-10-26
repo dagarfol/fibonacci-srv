@@ -1,13 +1,13 @@
-package org.dave.fibonacci.rest;
+package org.dave.fibonacci.infrastructure.rest;
 
-import static org.mockito.ArgumentMatchers.anyLong;
+import static org.mockito.ArgumentMatchers.anyInt;
 import static org.mockito.Mockito.atLeastOnce;
 import static org.mockito.Mockito.when;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
-import org.dave.fibonacci.service.FibonacciService;
+import org.dave.fibonacci.application.FibonacciService;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.Mockito;
@@ -29,7 +29,7 @@ public class FibonacciControllerTest {
 
 	@Test
 	public void testGetValueFor() throws Exception {
-		when(mockService.getValueFor(anyLong())).thenReturn(123L);
+		when(mockService.getValueFor(anyInt())).thenReturn(123L);
 
 		mvc.perform(get("/rest/fibonacci").param("number", "123"))
 		.andExpect(status().isOk())
@@ -37,7 +37,7 @@ public class FibonacciControllerTest {
 		.andReturn();
 		
 		//ensure the behavior is actually working as well
-		Mockito.verify(mockService, atLeastOnce()).getValueFor(anyLong());
+		Mockito.verify(mockService, atLeastOnce()).getValueFor(anyInt());
 	}
 
 }

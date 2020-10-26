@@ -1,9 +1,9 @@
-package org.dave.fibonacci.service.impl;
+package org.dave.fibonacci.application.impl;
 
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.is;
 
-import org.dave.fibonacci.service.FibonacciService;
+import org.dave.fibonacci.application.FibonacciService;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;

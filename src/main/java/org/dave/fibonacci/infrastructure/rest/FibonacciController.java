@@ -1,6 +1,6 @@
-package org.dave.fibonacci.rest;
+package org.dave.fibonacci.infrastructure.rest;
 
-import org.dave.fibonacci.service.FibonacciService;
+import org.dave.fibonacci.application.FibonacciService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -15,7 +15,7 @@ public class FibonacciController {
 	private FibonacciService fibonacciService;
 	
 	@GetMapping
-	public long getValueFor(@RequestParam("number") long number) {
+	public long getValueFor(@RequestParam("number") int number) {
 		return fibonacciService.getValueFor(number);
 	}
 }
