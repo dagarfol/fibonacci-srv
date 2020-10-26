@@ -69,4 +69,9 @@ public class DefaultFibonacciServiceTest {
 		});
 	}
 	
+	@Test
+	public void givenNegativeNumberShouldReturnMinusOne() {
+		assertThat(-1l, is(fibonacciService.getValueFor(-3)));
+	}
+	
 }

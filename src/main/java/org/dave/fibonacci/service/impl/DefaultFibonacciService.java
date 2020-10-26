@@ -8,7 +8,9 @@ public class DefaultFibonacciService implements FibonacciService {
 
 	@Override
 	public long getValueFor(long number) {
-		if(number == 0l || number == 1l) {
+		if(number < 0) {
+			return -1l;
+		}else if(number == 0l || number == 1l) {
 			return number;
 		}else {
 			long grandParent = 0;
