@@ -1,4 +1,4 @@
-package org.dave.fibonacci.application;
+package org.dave.fibonacci.domain.service;
 
 public interface FibonacciService {
 

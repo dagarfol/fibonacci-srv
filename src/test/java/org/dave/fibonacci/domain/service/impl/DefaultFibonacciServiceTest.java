@@ -1,11 +1,12 @@
-package org.dave.fibonacci.application.impl;
+package org.dave.fibonacci.domain.service.impl;
 
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.is;
 
-import org.dave.fibonacci.application.FibonacciService;
 import org.dave.fibonacci.domain.repos.FibonacciValuesRepository;
-import org.dave.fibonacci.domain.repos.impl.CacheBasedValuesRepository;
+import org.dave.fibonacci.domain.service.FibonacciService;
+import org.dave.fibonacci.domain.service.impl.DefaultFibonacciService;
+import org.dave.fibonacci.infrastructure.data.CacheBasedValuesRepository;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;

@@ -1,4 +1,4 @@
-package org.dave.fibonacci.domain.repos.impl;
+package org.dave.fibonacci.infrastructure.data;
 
 import java.util.ArrayList;
 import java.util.List;

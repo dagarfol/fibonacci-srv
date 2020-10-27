@@ -1,10 +1,10 @@
-package org.dave.fibonacci.application.impl;
+package org.dave.fibonacci.domain.service.impl;
 
 import java.util.stream.Stream;
 
-import org.dave.fibonacci.application.FibonacciService;
 import org.dave.fibonacci.domain.model.FibonacciNumber;
 import org.dave.fibonacci.domain.repos.FibonacciValuesRepository;
+import org.dave.fibonacci.domain.service.FibonacciService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
