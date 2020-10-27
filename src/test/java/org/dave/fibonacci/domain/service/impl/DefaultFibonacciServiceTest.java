@@ -1,9 +1,12 @@
-package org.dave.fibonacci.service.impl;
+package org.dave.fibonacci.domain.service.impl;
 
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.is;
 
-import org.dave.fibonacci.service.FibonacciService;
+import org.dave.fibonacci.domain.repos.FibonacciValuesRepository;
+import org.dave.fibonacci.domain.service.FibonacciService;
+import org.dave.fibonacci.domain.service.impl.DefaultFibonacciService;
+import org.dave.fibonacci.infrastructure.data.CacheBasedValuesRepository;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -21,6 +24,11 @@ public class DefaultFibonacciServiceTest {
 		@Bean
 		public FibonacciService fibonacciService() {
 			return new DefaultFibonacciService();
+		}
+		
+		@Bean
+		public FibonacciValuesRepository fibonacciValuesRepository() {
+			return new CacheBasedValuesRepository();
 		}
 	}
 
